@@ -1,0 +1,56 @@
+{
+  "name": "webpack-three-hmr-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "global": "^4.3.0",
+    "glsl-checker": "^1.0.1",
+    "glsl-noise": "0.0.0",
+    "glslify": "^5.0.0",
+    "glslify-hex": "^2.0.1",
+    "glslify-fancy-imports": "^1.0.1",
+    "three": "^0.73.0",
+    "three-orbit-viewer": "^69.3.0",
+    "three-vignette-background": "^1.0.2",
+    "transform-loader": "^0.2.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "glslify-fancy-imports": "^1.0.1",
+    "ify-loader": "mattdesl/ify-loader#fix-errors",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server client.js --inline --hot --colors --port=9966"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/webpack-three-hmr-test.git"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "glslify": {
+    "transform": [
+      "glslify-fancy-imports",
+      "glslify-hex"
+    ]
+  },
+  "homepage": "https://github.com/mattdesl/webpack-three-hmr-test",
+  "bugs": {
+    "url": "https://github.com/mattdesl/webpack-three-hmr-test/issues"
+  }
+}
