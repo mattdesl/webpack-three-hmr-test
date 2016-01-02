@@ -64,7 +64,7 @@ void main () {
 
 The webpack config is using [ify-loader](https://github.com/hughsk/ify-loader). This is not strictly necessary, but solves some `glslify` issues for us:
 
-- First, it allows third-party modules with browserify transforms (like glslify) to be resolved and bundled automatically, e.g. [three-vignette-loader](https://github.com/mattdesl/three-vignette-background)
+- First, it allows third-party modules with browserify transforms (like glslify) to be resolved and bundled automatically, e.g. [three-vignette-background](https://github.com/mattdesl/three-vignette-background)
 - Second, it allows us to specify `"browserify"` and `"glslify"` configuration in our local [package.json](./package.json)
 - Third, it allows us to use `glslify(file, { ... })` syntax without relying on Webpack `require` overloads
 
